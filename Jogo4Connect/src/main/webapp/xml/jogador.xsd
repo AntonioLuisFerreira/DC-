@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="server">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="jogadores" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="jogador" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="idade" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                                        <xs:element name="nacionalidade" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                                        <xs:element name="foto" minOccurs="0" maxOccurs="1" type="xs:string"/>
+                                        <xs:element name="cor" minOccurs="1" maxOccurs="1" type="xs:string"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="nome" type="xs:string" use="required"/>
+                                    <xs:attribute name="password" type="xs:string" use="required"/>
+                                    <xs:attribute name="vitorias" type="xs:string" use="required"/>
+                                    <xs:attribute name="derrotas" type="xs:string" use="required"/>
+                                    <xs:attribute name="tempoJogado" type="xs:string" use="required"/>
+                                    <xs:attribute name="online" type="xs:string" use="required"/>
+                                    <xs:attribute name="empate" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="protocol" minOccurs="0" maxOccurs="1" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute type="xs:anyURI" name="targetNamespace"/>
+            <xs:attribute type="xs:string" name="elementFormDefault"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="jogador.xsd"/>
+    <xs:element name="protocol">
+        <xs:complexType>
+            <xs:choice>
+                <xs:element ref="mostrarFoto"/>
+                <xs:element ref="login"/>
+                <xs:element ref="logout"/>
+                <xs:element ref="register"/>
+                <xs:element ref="enviarJogada"/>
+                <xs:element ref="pedirInfo"/>
+                <xs:element ref="resposta"/>
+                <xs:element ref="alterarFoto"/>
+                <xs:element ref="alterarColor"/>
+                <xs:element ref="jogar"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="mostrarFoto" type="PRmostrar"/>
+    <xs:element name="login" type="PRlogin"/>
+    <xs:element name="logout" type="PRlogout"/>
+    <xs:element name="register" type="PRregistar"/>
+    <xs:element name="enviarJogada" type="PRenviarJogada"/>
+    <xs:element name="resposta" type="PRresposta"/>
+    <xs:element name="alterarFoto" type="PRalterarFoto"/>
+    
+    <xs:element name="alterarColor" type="PRalterarColor"/>
+    
+    <xs:element name="pedirInfo" type="PRpedirInfo"/>
+    
+    <xs:element name="jogar" type="PRjogar"/>
+
+    <xs:complexType name="PRmostrar">
+        <xs:sequence>
+            <xs:element name="pedido">
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PRlogin">
+        <xs:sequence>
+            <xs:element name="pedido">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nome" type="xs:string"/>
+                        <xs:element name="password" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PRlogout">
+        <xs:sequence>
+            <xs:element name="pedido">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nome" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PRregistar">
+        <xs:sequence>
+            <xs:element name="pedido">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nome" type="xs:string"/>
+                        <xs:element name="password" type="xs:string"/>
+                        <xs:element name="idade" type="xs:string"/>
+                        <xs:element name="nacionalidade" type="xs:string"/>
+                        <xs:element name="foto" type="xs:string"/>
+                        <xs:element name="cor" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    
+
+    <xs:complexType name="PRenviarJogada">
+        <xs:sequence>
+            <xs:element name="pedido">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="jogador1" type="xs:string"/>
+                        <xs:element name="coluna" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="PRresposta">
+        <xs:sequence>
+            <xs:element name="sucesso" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    
+    <xs:complexType name="PRalterarFoto">
+        <xs:sequence>
+            <xs:element name="pedido">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nome" type="xs:string"/>
+                        <xs:element name="path" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="PRalterarColor">
+        <xs:sequence>
+            <xs:element name="pedido">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nome" type="xs:string"/>
+                        <xs:element name="cor" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="PRpedirInfo">
+        <xs:sequence>
+            <xs:element name="pedido">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nome" type="xs:string"/>
+                        <xs:element name="show" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="PRjogar">
+        <xs:sequence>
+            <xs:element name="pedido">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nome" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+</xs:schema>

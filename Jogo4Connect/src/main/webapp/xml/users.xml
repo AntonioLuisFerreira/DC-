@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<server xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="jogador.xsd">
+    <jogadores>
+        <jogador derrotas="19.0" empate="2" nome="admin" online="1" password="123" tempoJogado="4697.744" vitorias="26.0">
+            <idade>12</idade>
+            <nacionalidade>Portugal</nacionalidade>
+            <foto>images/nerdemoji.png</foto>
+            <cor>#000000</cor>
+        </jogador>
+        <jogador derrotas="21.0" empate="0" nome="teste1" online="1" password="123" tempoJogado="1107.744" vitorias="14.0">
+            <idade>22</idade>
+            <nacionalidade>Portugal</nacionalidade>
+            <foto>images/treecko.jpg</foto>
+            <cor>#4d72e0</cor>
+        </jogador>
+	    <jogador derrotas="0" empate="0" nome="Manuel" online="1" password="123" tempoJogado="100" vitorias="5">
+	<idade>56</idade>
+	<nacionalidade>Canada</nacionalidade>
+	<foto>images/profile.jpg</foto>
+	<cor>#2255ec</cor>
+	</jogador>
+	<jogador derrotas="1.0" empate="0" nome="Jose" online="1" password="123" tempoJogado="88.41" vitorias="0.0">
+	<idade>55</idade>
+	<nacionalidade>Spain</nacionalidade>
+	<foto>images/nerdemoji.png</foto>
+	<cor>#e12323</cor>
+	</jogador>
+<jogador derrotas="0.0" empate="0" nome="Carlos" online="0" password="123" tempoJogado="88.41" vitorias="1.0">
+<idade>44</idade>
+<nacionalidade>France</nacionalidade>
+<foto>images/treecko.jpg</foto>
+<cor>#d71d1d</cor>
+</jogador>
+</jogadores>
+</server>
